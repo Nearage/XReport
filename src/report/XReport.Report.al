@@ -53,7 +53,7 @@ report 50101 "XReport"
 
     trigger OnInitReport()
     begin
-        XLinesPerPage := 5;
+        XLinesPerPage := 27;
         XTotalsLines := 3;
     end;
 
