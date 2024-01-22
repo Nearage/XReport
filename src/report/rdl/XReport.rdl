@@ -11,37 +11,6 @@
       <rd:DataSourceID>2f4f038e-934a-4fd9-b57f-4ae24543089c</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="XLinesPerPage">
-          <DataField>XLinesPerPage</DataField>
-        </Field>
-        <Field Name="XLines">
-          <DataField>XLines</DataField>
-        </Field>
-        <Field Name="No_">
-          <DataField>No_</DataField>
-        </Field>
-        <Field Name="XBlanks">
-          <DataField>XBlanks</DataField>
-        </Field>
-        <Field Name="XBlank">
-          <DataField>XBlank</DataField>
-        </Field>
-        <Field Name="XTotalsLines">
-          <DataField>XTotalsLines</DataField>
-        </Field>
-        <Field Name="XSideBar">
-          <DataField>XSideBar</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1531,6 +1500,7 @@
                             </Border>
                           </Style>
                         </Rectangle>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1573,21 +1543,21 @@
                                     <TablixCells>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox38">
+                                          <Textbox Name="No_">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
+                                                    <Value>=Fields!No_.Value</Value>
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox38</rd:DefaultName>
+                                            <rd:DefaultName>No_</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1611,21 +1581,21 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox39">
+                                          <Textbox Name="No">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
+                                                    <Value>=Fields!No.Value</Value>
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox39</rd:DefaultName>
+                                            <rd:DefaultName>No</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1864,6 +1834,7 @@
                                   <TablixMember />
                                 </TablixMembers>
                               </TablixRowHierarchy>
+                              <DataSetName>DataSet_Result</DataSetName>
                               <Top>0in</Top>
                               <Left>0.05in</Left>
                               <Height>0.25in</Height>
@@ -1889,6 +1860,7 @@
                             </Border>
                           </Style>
                         </Rectangle>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2247,6 +2219,7 @@
                             </Border>
                           </Style>
                         </Rectangle>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2583,6 +2556,7 @@
                             </Border>
                           </Style>
                         </Rectangle>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2686,6 +2660,7 @@
                             </Border>
                           </Style>
                         </Rectangle>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2742,11 +2717,6 @@
               <TablixMembers>
                 <TablixMember>
                   <Group Name="Details">
-                    <GroupExpressions>
-                      <GroupExpression>=Fields!No_.Value</GroupExpression>
-                      <GroupExpression>=Fields!XBlank.Value</GroupExpression>
-                      <GroupExpression>=Fields!XSideBar.Value</GroupExpression>
-                    </GroupExpressions>
                     <Filters>
                       <Filter>
                         <FilterExpression>=IsNothing(Fields!XSideBar.Value)</FilterExpression>
@@ -3021,4 +2991,38 @@ End Function</Code>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="XLinesPerPage">
+          <DataField>XLinesPerPage</DataField>
+        </Field>
+        <Field Name="XTotalsLines">
+          <DataField>XTotalsLines</DataField>
+        </Field>
+        <Field Name="XLines">
+          <DataField>XLines</DataField>
+        </Field>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="XBlanks">
+          <DataField>XBlanks</DataField>
+        </Field>
+        <Field Name="XBlank">
+          <DataField>XBlank</DataField>
+        </Field>
+        <Field Name="XSideBar">
+          <DataField>XSideBar</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

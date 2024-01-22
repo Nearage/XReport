@@ -8,36 +8,46 @@ report 50101 "XReport"
 
     dataset
     {
-        dataitem(Item; Item)
+        dataitem("Sales Header"; "Sales Header")
         {
+            RequestFilterFields = "No.", "Sell-to Customer No.";
+
             column(XLinesPerPage; XLinesPerPage) { }
+            column(XTotalsLines; XTotalsLines) { }
             column(XLines; XLines) { }
 
             column(No_; "No.") { IncludeCaption = true; }
 
-            trigger OnPreDataItem()
-            begin
-                XLines := Item.Count;
-            end;
-        }
+            dataitem("Sales Invoice Line"; "Sales Line")
+            {
+                DataItemLinkReference = "Sales Header";
+                DataItemLink = "Document No." = field("No."), "Bill-to Customer No." = field("Bill-to Customer No.");
+                DataItemTableView = sorting("Document No.", "Line No.", "Bill-to Customer No.");
 
-        dataitem(XAuxLines; Integer)
-        {
-            column(XBlanks; XBlanks) { }
-            column(XBlank; Number) { }
-            column(XTotalsLines; XTotalsLines) { }
-
-            trigger OnPreDataItem()
-            begin
-                XBlanks := XLinesPerPage - (XLines Mod XLinesPerPage);
-
-                if XBlanks < XTotalsLines then begin
-                    XBlanks += XLinesPerPage;
-                    XLines += XLinesPerPage;
+                column(No; "No.") { }
+                trigger OnPreDataItem()
+                begin
+                    XLines := "Sales Invoice Line".Count;
                 end;
+            }
 
-                SetRange(Number, 1, XBlanks);
-            end;
+            dataitem(XAuxLines; Integer)
+            {
+                column(XBlanks; XBlanks) { }
+                column(XBlank; Number) { }
+
+                trigger OnPreDataItem()
+                begin
+                    XBlanks := XLinesPerPage - (XLines Mod XLinesPerPage);
+
+                    if XBlanks < XTotalsLines then begin
+                        XBlanks += XLinesPerPage;
+                        XLines += XLinesPerPage;
+                    end;
+
+                    SetRange(Number, 1, XBlanks);
+                end;
+            }
         }
 
         dataitem(XSideBars; Integer)
@@ -58,6 +68,7 @@ report 50101 "XReport"
     end;
 
     var
+        XPage: Integer;
         XLinesPerPage: Integer;
         XTotalsLines: Integer;
         XLines: Integer;
