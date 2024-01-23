@@ -11,73 +11,6 @@
       <rd:DataSourceID>2f4f038e-934a-4fd9-b57f-4ae24543089c</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="XLinesPerPage">
-          <DataField>XLinesPerPage</DataField>
-        </Field>
-        <Field Name="XTotalsLines">
-          <DataField>XTotalsLines</DataField>
-        </Field>
-        <Field Name="XLines">
-          <DataField>XLines</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Name_2">
-          <DataField>Company_Name_2</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Post_Code">
-          <DataField>Company_Post_Code</DataField>
-        </Field>
-        <Field Name="Company_City">
-          <DataField>Company_City</DataField>
-        </Field>
-        <Field Name="Company_Country">
-          <DataField>Company_Country</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_E_Mail">
-          <DataField>Company_E_Mail</DataField>
-        </Field>
-        <Field Name="Company_Web">
-          <DataField>Company_Web</DataField>
-        </Field>
-        <Field Name="Company_CIF">
-          <DataField>Company_CIF</DataField>
-        </Field>
-        <Field Name="No">
-          <DataField>No</DataField>
-        </Field>
-        <Field Name="XBlanks">
-          <DataField>XBlanks</DataField>
-        </Field>
-        <Field Name="XBlank">
-          <DataField>XBlank</DataField>
-        </Field>
-        <Field Name="XSideBar">
-          <DataField>XSideBar</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -91,7 +24,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>3.875in</Height>
+                  <Height>3.775in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -107,6 +40,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -249,7 +183,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Order_No.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -285,7 +219,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=FormatDateTime(Fields!Order_Date.Value, DateFormat.ShortDate)</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -321,7 +255,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Location_Code.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -373,11 +307,11 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!Company_Name.Value</Value>
+                                      <Value>=UCase(Fields!Company_Name.Value)</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>12pt</FontSize>
-                                        <FontWeight>Bold</FontWeight>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -414,6 +348,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                     <TextRun>
@@ -421,6 +356,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                     <TextRun>
@@ -428,6 +364,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -464,6 +401,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                     <TextRun>
@@ -471,6 +409,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                     <TextRun>
@@ -478,6 +417,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -514,6 +454,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                     <TextRun>
@@ -521,6 +462,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                     <TextRun>
@@ -528,6 +470,7 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
+                                        <Color>DimGray</Color>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -560,7 +503,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>PEDIDO VENTA</Value>
+                                      <Value>PEDIDO DE COMPRA</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -602,6 +545,13 @@
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
                                     </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!Sell_to_Customer_No_.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
@@ -629,7 +579,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>PÁGINA:  </Value>
+                                      <Value>PÁGINA: </Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>6pt</FontSize>
@@ -638,6 +588,18 @@
                                     </TextRun>
                                     <TextRun>
                                       <Value>=Code.GetPageNo()</Value>
+                                      <Style>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value> de </Value>
+                                      <Style>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Code.GetNumPages()</Value>
                                       <Style>
                                         <FontSize>8pt</FontSize>
                                       </Style>
@@ -676,6 +638,13 @@
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
                                     </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!VAT_Registration_No_.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
@@ -703,11 +672,18 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>AGENTE:</Value>
+                                      <Value>AGENTE: </Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>6pt</FontSize>
                                         <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!Shipping_Agent_Code.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -753,7 +729,7 @@
                               <rd:DefaultName>Textbox105</rd:DefaultName>
                               <Top>1.625in</Top>
                               <Left>3.91in</Left>
-                              <Height>1.95in</Height>
+                              <Height>1.6in</Height>
                               <Width>3.81in</Width>
                               <ZIndex>17</ZIndex>
                               <Style>
@@ -773,10 +749,9 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=UCase(Fields!Company_Name.Value)</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -793,7 +768,7 @@
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
+                                <VerticalAlign>Top</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
                                 <PaddingTop>2pt</PaddingTop>
@@ -806,6 +781,27 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
+                                      <Value>=Fields!Company_Address.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>, </Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!Company_Address_2.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
                                       <Value xml:space="preserve"> </Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
@@ -817,7 +813,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox111</rd:DefaultName>
-                              <Top>1.875in</Top>
+                              <Top>1.825in</Top>
                               <Left>3.96in</Left>
                               <Height>0.2in</Height>
                               <Width>3.71in</Width>
@@ -840,7 +836,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Company_Post_Code.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -851,7 +847,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox113</rd:DefaultName>
-                              <Top>2.075in</Top>
+                              <Top>1.975in</Top>
                               <Left>3.96in</Left>
                               <Height>0.2in</Height>
                               <Width>3.71in</Width>
@@ -874,7 +870,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Company_City.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -885,7 +881,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox155</rd:DefaultName>
-                              <Top>2.275in</Top>
+                              <Top>2.125in</Top>
                               <Left>3.96in</Left>
                               <Height>0.2in</Height>
                               <Width>3.71in</Width>
@@ -908,7 +904,14 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>TLF.: </Value>
+                                      <Value>TLF.:  </Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>6pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!Company_Phone_No.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>6pt</FontSize>
@@ -919,7 +922,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox194</rd:DefaultName>
-                              <Top>2.225in</Top>
+                              <Top>2.075in</Top>
                               <Left>6.17in</Left>
                               <Height>0.2in</Height>
                               <Width>1.5in</Width>
@@ -957,9 +960,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox105</rd:DefaultName>
-                              <Top>2.475in</Top>
+                              <Top>2.375in</Top>
                               <Left>3.96in</Left>
-                              <Height>1.05in</Height>
+                              <Height>0.8in</Height>
                               <Width>3.71in</Width>
                               <ZIndex>23</ZIndex>
                               <Style>
@@ -994,7 +997,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox105</rd:DefaultName>
-                              <Top>2.475in</Top>
+                              <Top>2.375in</Top>
                               <Left>4.01in</Left>
                               <Height>0.2in</Height>
                               <Width>3.61in</Width>
@@ -1003,7 +1006,7 @@
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
+                                <VerticalAlign>Top</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
                                 <PaddingTop>2pt</PaddingTop>
@@ -1027,7 +1030,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox105</rd:DefaultName>
-                              <Top>2.675in</Top>
+                              <Top>2.525in</Top>
                               <Left>4.01in</Left>
                               <Height>0.2in</Height>
                               <Width>3.61in</Width>
@@ -1061,7 +1064,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox111</rd:DefaultName>
-                              <Top>2.875in</Top>
+                              <Top>2.675in</Top>
                               <Left>4.01in</Left>
                               <Height>0.2in</Height>
                               <Width>3.61in</Width>
@@ -1096,7 +1099,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox113</rd:DefaultName>
-                              <Top>3.075in</Top>
+                              <Top>2.825in</Top>
                               <Left>4.01in</Left>
                               <Height>0.2in</Height>
                               <Width>3.61in</Width>
@@ -1131,7 +1134,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox155</rd:DefaultName>
-                              <Top>3.275in</Top>
+                              <Top>2.925in</Top>
                               <Left>4.01in</Left>
                               <Height>0.2in</Height>
                               <Width>3.61in</Width>
@@ -1166,7 +1169,7 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox194</rd:DefaultName>
-                              <Top>3.225in</Top>
+                              <Top>2.875in</Top>
                               <Left>6.07in</Left>
                               <Height>0.2in</Height>
                               <Width>1.5in</Width>
@@ -1190,7 +1193,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Company_Phone_No.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                       </Style>
@@ -1224,7 +1227,7 @@
                             </Textbox>
                             <Image Name="Image2">
                               <Source>Database</Source>
-                              <Value>=Fields!No_.Value</Value>
+                              <Value>=Fields!Company_Picture.Value</Value>
                               <MIMEType>image/bmp</MIMEType>
                               <Sizing>FitProportional</Sizing>
                               <Top>1.175in</Top>
@@ -1240,7 +1243,7 @@
                             </Image>
                             <Image Name="Image3">
                               <Source>Database</Source>
-                              <Value>=Fields!No_.Value</Value>
+                              <Value>=Fields!Company_Picture.Value</Value>
                               <MIMEType>image/bmp</MIMEType>
                               <Sizing>FitProportional</Sizing>
                               <Top>1.175in</Top>
@@ -1390,7 +1393,7 @@
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Center</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -1430,7 +1433,7 @@
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Center</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -1470,7 +1473,7 @@
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Center</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -1510,7 +1513,7 @@
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Center</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -1550,7 +1553,7 @@
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Center</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -1589,7 +1592,7 @@
                                   <TablixMember />
                                 </TablixMembers>
                               </TablixRowHierarchy>
-                              <Top>3.625in</Top>
+                              <Top>3.525in</Top>
                               <Left>0.05in</Left>
                               <Height>0.25in</Height>
                               <Width>7.67in</Width>
@@ -1657,21 +1660,21 @@
                                     <TablixCells>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox1">
+                                          <Textbox Name="No">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
+                                                    <Value>=Fields!Item_No.Value</Value>
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox1</rd:DefaultName>
+                                            <rd:DefaultName>No</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1695,21 +1698,21 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox4">
+                                          <Textbox Name="Description">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
+                                                    <Value>=Fields!Description.Value</Value>
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox4</rd:DefaultName>
+                                            <rd:DefaultName>Description</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1733,14 +1736,14 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox40">
+                                          <Textbox Name="Quantity">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
+                                                    <Value>=Fields!Quantity.Value</Value>
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
@@ -1749,7 +1752,7 @@
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox40</rd:DefaultName>
+                                            <rd:DefaultName>Quantity</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1773,14 +1776,14 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox41">
+                                          <Textbox Name="Unit_Price">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
+                                                    <Value>=Fields!Unit_Price.Value</Value>
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
@@ -1789,7 +1792,7 @@
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox41</rd:DefaultName>
+                                            <rd:DefaultName>Unit_Price</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1813,14 +1816,14 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox42">
+                                          <Textbox Name="Line_Discount__">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
+                                                    <Value>=Fields!Line_Discount__.Value</Value>
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
@@ -1829,7 +1832,7 @@
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox42</rd:DefaultName>
+                                            <rd:DefaultName>Line_Discount__</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1853,14 +1856,14 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox43">
+                                          <Textbox Name="Amount">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
+                                                    <Value>=Fields!Amount.Value</Value>
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
@@ -1869,7 +1872,7 @@
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox43</rd:DefaultName>
+                                            <rd:DefaultName>Amount</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1893,14 +1896,14 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox44">
+                                          <Textbox Name="VAT__">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
+                                                    <Value>=Fields!VAT__.Value</Value>
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
@@ -1909,7 +1912,7 @@
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox44</rd:DefaultName>
+                                            <rd:DefaultName>VAT__</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -2349,7 +2352,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!SubTotal.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <Format>N2</Format>
@@ -2384,9 +2387,10 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!VATPct.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
+                                        <Format>N2</Format>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -2419,7 +2423,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!VAT_Amount.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <Format>N2</Format>
@@ -2455,10 +2459,10 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Total.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
-                                        <Format>N2</Format>
+                                        <Format>C2</Format>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -2480,7 +2484,7 @@
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingRight>16pt</PaddingRight>
                                 <PaddingTop>2pt</PaddingTop>
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
@@ -2620,7 +2624,7 @@
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingRight>16pt</PaddingRight>
                                 <PaddingTop>2pt</PaddingTop>
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
@@ -2635,6 +2639,12 @@
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!Payment_Terms_Code.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -2673,7 +2683,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.815in</Height>
+                  <Height>0.915in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -2751,7 +2761,7 @@
                               <rd:DefaultName>Textbox275</rd:DefaultName>
                               <Top>0in</Top>
                               <Left>0.05in</Left>
-                              <Height>0.815in</Height>
+                              <Height>0.915in</Height>
                               <Width>7.67in</Width>
                               <Style>
                                 <Border>
@@ -2975,12 +2985,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -3091,4 +3095,149 @@ End Function</Code>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="XLinesPerPage">
+          <DataField>XLinesPerPage</DataField>
+        </Field>
+        <Field Name="XTotalsLines">
+          <DataField>XTotalsLines</DataField>
+        </Field>
+        <Field Name="XLines">
+          <DataField>XLines</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Name_2">
+          <DataField>Company_Name_2</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Post_Code">
+          <DataField>Company_Post_Code</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_Country">
+          <DataField>Company_Country</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_E_Mail">
+          <DataField>Company_E_Mail</DataField>
+        </Field>
+        <Field Name="Company_Web">
+          <DataField>Company_Web</DataField>
+        </Field>
+        <Field Name="Company_CIF">
+          <DataField>Company_CIF</DataField>
+        </Field>
+        <Field Name="Order_No">
+          <DataField>Order_No</DataField>
+        </Field>
+        <Field Name="Order_Date">
+          <DataField>Order_Date</DataField>
+        </Field>
+        <Field Name="Location_Code">
+          <DataField>Location_Code</DataField>
+        </Field>
+        <Field Name="Sell_to_Customer_No_">
+          <DataField>Sell_to_Customer_No_</DataField>
+        </Field>
+        <Field Name="VAT_Registration_No_">
+          <DataField>VAT_Registration_No_</DataField>
+        </Field>
+        <Field Name="Shipping_Agent_Code">
+          <DataField>Shipping_Agent_Code</DataField>
+        </Field>
+        <Field Name="VATPct">
+          <DataField>VATPct</DataField>
+        </Field>
+        <Field Name="VATPctFormat">
+          <DataField>VATPctFormat</DataField>
+        </Field>
+        <Field Name="Payment_Terms_Code">
+          <DataField>Payment_Terms_Code</DataField>
+        </Field>
+        <Field Name="Item_No">
+          <DataField>Item_No</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Unit_Price">
+          <DataField>Unit_Price</DataField>
+        </Field>
+        <Field Name="Unit_PriceFormat">
+          <DataField>Unit_PriceFormat</DataField>
+        </Field>
+        <Field Name="Line_Discount__">
+          <DataField>Line_Discount__</DataField>
+        </Field>
+        <Field Name="Line_Discount__Format">
+          <DataField>Line_Discount__Format</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="VAT__">
+          <DataField>VAT__</DataField>
+        </Field>
+        <Field Name="VAT__Format">
+          <DataField>VAT__Format</DataField>
+        </Field>
+        <Field Name="XBlanks">
+          <DataField>XBlanks</DataField>
+        </Field>
+        <Field Name="XBlank">
+          <DataField>XBlank</DataField>
+        </Field>
+        <Field Name="SubTotal">
+          <DataField>SubTotal</DataField>
+        </Field>
+        <Field Name="SubTotalFormat">
+          <DataField>SubTotalFormat</DataField>
+        </Field>
+        <Field Name="VAT_Amount">
+          <DataField>VAT_Amount</DataField>
+        </Field>
+        <Field Name="VAT_AmountFormat">
+          <DataField>VAT_AmountFormat</DataField>
+        </Field>
+        <Field Name="Total">
+          <DataField>Total</DataField>
+        </Field>
+        <Field Name="TotalFormat">
+          <DataField>TotalFormat</DataField>
+        </Field>
+        <Field Name="XSideBar">
+          <DataField>XSideBar</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

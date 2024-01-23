@@ -29,16 +29,43 @@ report 50101 "XReport"
             column(Company_Web; CompanyInformation."Home Page") { }
             column(Company_CIF; CompanyInformation."VAT Registration No.") { }
 
+            column(Order_No; "No.") { }
+            column(Order_Date; "Order Date") { }
+            column(Location_Code; "Location Code") { }
+            column(Sell_to_Customer_No_; "Sell-to Customer No.") { }
+            column(VAT_Registration_No_; "VAT Registration No.") { }
+            column(Shipping_Agent_Code; "Shipping Agent Code") { }
+            column(VATPct; VATPct) { }
+            column(Payment_Terms_Code; "Payment Terms Code") { }
+
             dataitem("Sales Line"; "Sales Line")
             {
                 DataItemLinkReference = "Sales Header";
                 DataItemLink = "Document No." = field("No."), "Sell-to Customer No." = field("Sell-to Customer No.");
                 DataItemTableView = sorting("Document No.", "Line No.", "Bill-to Customer No.");
 
-                column(No; "No.") { }
+                column(Item_No; "No.") { }
+                column(Description; Description) { }
+                column(Quantity; Quantity) { }
+                column(Unit_Price; "Unit Price") { }
+                column(Line_Discount__; "Line Discount %") { }
+                column(Amount; Amount) { }
+                column(VAT__; "VAT %") { }
+
                 trigger OnPreDataItem()
                 begin
                     XLines := "Sales Line".Count;
+                end;
+
+                trigger OnAfterGetRecord()
+                begin
+                    SubTotal += Amount;
+
+                    if "VAT %" > VATPct Then
+                        VATPct := "VAT %";
+
+                    VAT_Amount += Amount * ("VAT %" / 100);
+                    Total += Amount + Amount * ("VAT %" / 100);
                 end;
             }
 
@@ -46,6 +73,9 @@ report 50101 "XReport"
             {
                 column(XBlanks; XBlanks) { }
                 column(XBlank; Number) { }
+                column(SubTotal; SubTotal) { }
+                column(VAT_Amount; VAT_Amount) { }
+                column(Total; Total) { }
 
                 trigger OnPreDataItem()
                 begin
@@ -90,4 +120,9 @@ report 50101 "XReport"
         TempVatAmountLine: Record "VAT Amount Line" temporary;
         CompanyInformation: Record "Company Information";
         CompanyBankAccount: Record "Bank Account";
+
+        SubTotal: Decimal;
+        VATPct: Decimal;
+        VAT_Amount: Decimal;
+        Total: Decimal;
 }
