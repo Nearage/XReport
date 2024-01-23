@@ -11,6 +11,73 @@
       <rd:DataSourceID>2f4f038e-934a-4fd9-b57f-4ae24543089c</rd:DataSourceID>
     </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="XLinesPerPage">
+          <DataField>XLinesPerPage</DataField>
+        </Field>
+        <Field Name="XTotalsLines">
+          <DataField>XTotalsLines</DataField>
+        </Field>
+        <Field Name="XLines">
+          <DataField>XLines</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Name_2">
+          <DataField>Company_Name_2</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Post_Code">
+          <DataField>Company_Post_Code</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_Country">
+          <DataField>Company_Country</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_E_Mail">
+          <DataField>Company_E_Mail</DataField>
+        </Field>
+        <Field Name="Company_Web">
+          <DataField>Company_Web</DataField>
+        </Field>
+        <Field Name="Company_CIF">
+          <DataField>Company_CIF</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="XBlanks">
+          <DataField>XBlanks</DataField>
+        </Field>
+        <Field Name="XBlank">
+          <DataField>XBlank</DataField>
+        </Field>
+        <Field Name="XSideBar">
+          <DataField>XSideBar</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -30,6 +97,41 @@
                       <CellContents>
                         <Rectangle Name="Rectangle1">
                           <ReportItems>
+                            <Textbox Name="CompanyVATRegistrationNo4">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Company_CIF.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>CompanyVATRegistrationNo</rd:DefaultName>
+                              <Top>0.275in</Top>
+                              <Left>3.885in</Left>
+                              <Height>0.2in</Height>
+                              <Width>3.835in</Width>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Middle</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>4pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
                             <Textbox Name="Textbox119">
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -54,6 +156,7 @@
                               <Left>0.05in</Left>
                               <Height>0.2in</Height>
                               <Width>1.27in</Width>
+                              <ZIndex>1</ZIndex>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -90,7 +193,7 @@
                               <Left>1.32in</Left>
                               <Height>0.2in</Height>
                               <Width>1.27in</Width>
-                              <ZIndex>1</ZIndex>
+                              <ZIndex>2</ZIndex>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -127,7 +230,7 @@
                               <Left>2.59in</Left>
                               <Height>0.2in</Height>
                               <Width>1.27in</Width>
-                              <ZIndex>2</ZIndex>
+                              <ZIndex>3</ZIndex>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -163,7 +266,7 @@
                               <Left>0.05in</Left>
                               <Height>0.2in</Height>
                               <Width>1.27in</Width>
-                              <ZIndex>3</ZIndex>
+                              <ZIndex>4</ZIndex>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -199,7 +302,7 @@
                               <Left>1.32in</Left>
                               <Height>0.2in</Height>
                               <Width>1.27in</Width>
-                              <ZIndex>4</ZIndex>
+                              <ZIndex>5</ZIndex>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -235,7 +338,7 @@
                               <Left>2.59in</Left>
                               <Height>0.2in</Height>
                               <Width>1.27in</Width>
-                              <ZIndex>5</ZIndex>
+                              <ZIndex>6</ZIndex>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -250,14 +353,14 @@
                             </Textbox>
                             <Image Name="Image1">
                               <Source>Database</Source>
-                              <Value>=Fields!No_.Value</Value>
+                              <Value>=Fields!Company_Picture.Value</Value>
                               <MIMEType>image/bmp</MIMEType>
                               <Sizing>FitProportional</Sizing>
                               <Top>0.025in</Top>
                               <Left>0.5925in</Left>
                               <Height>1.1in</Height>
                               <Width>2.75in</Width>
-                              <ZIndex>6</ZIndex>
+                              <ZIndex>7</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -270,7 +373,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Company_Name.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>12pt</FontSize>
@@ -287,42 +390,6 @@
                               <Top>0.025in</Top>
                               <Left>3.885in</Left>
                               <Height>0.3in</Height>
-                              <Width>3.835in</Width>
-                              <ZIndex>7</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Color>LightGrey</Color>
-                                  <Style>None</Style>
-                                </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>4pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="CompanyVATRegistrationNo4">
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value />
-                                      <Style>
-                                        <FontFamily>Calibri</FontFamily>
-                                        <FontSize>8pt</FontSize>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Right</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>CompanyVATRegistrationNo</rd:DefaultName>
-                              <Top>0.275in</Top>
-                              <Left>3.885in</Left>
-                              <Height>0.2in</Height>
                               <Width>3.835in</Width>
                               <ZIndex>8</ZIndex>
                               <Style>
@@ -343,7 +410,21 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Company_Address.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>, </Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!Company_Address_2.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -379,7 +460,21 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Company_Post_Code.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>, </Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!Company_City.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -415,7 +510,21 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Company_E_Mail.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value> | </Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!Company_Web.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -520,11 +629,17 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>PÁGINA: </Value>
+                                      <Value>PÁGINA:  </Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>6pt</FontSize>
                                         <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Code.GetPageNo()</Value>
+                                      <Style>
+                                        <FontSize>8pt</FontSize>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -1500,7 +1615,6 @@
                             </Border>
                           </Style>
                         </Rectangle>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1543,21 +1657,21 @@
                                     <TablixCells>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="No_">
+                                          <Textbox Name="Textbox1">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!No_.Value</Value>
+                                                    <Value />
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>No_</rd:DefaultName>
+                                            <rd:DefaultName>Textbox1</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1581,21 +1695,21 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="No">
+                                          <Textbox Name="Textbox4">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!No.Value</Value>
+                                                    <Value />
                                                     <Style />
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>No</rd:DefaultName>
+                                            <rd:DefaultName>Textbox4</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1860,7 +1974,6 @@
                             </Border>
                           </Style>
                         </Rectangle>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2219,7 +2332,6 @@
                             </Border>
                           </Style>
                         </Rectangle>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2556,7 +2668,6 @@
                             </Border>
                           </Style>
                         </Rectangle>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2660,7 +2771,6 @@
                             </Border>
                           </Style>
                         </Rectangle>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2865,28 +2975,10 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParameters>
-    <ReportParameter Name="No_Caption">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>No_Caption</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>No_Caption</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
-      <NumberOfColumns>1</NumberOfColumns>
-      <NumberOfRows>1</NumberOfRows>
-      <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>No_Caption</ParameterName>
-        </CellDefinition>
-      </CellDefinitions>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
@@ -2986,43 +3078,17 @@ Public Function SetBlankBorderVisibility(ByVal Blank)
     Else
         Return "None"
     End If
+End Function
+
+Function GetPageNo()
+   Return Ceiling(XLine / XLinesPerPage)
+End Function
+
+Function GetNumPages()
+    Return Ceiling((XLines + XTotalsLines) / XLinesPerPage)
 End Function</Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="XLinesPerPage">
-          <DataField>XLinesPerPage</DataField>
-        </Field>
-        <Field Name="XTotalsLines">
-          <DataField>XTotalsLines</DataField>
-        </Field>
-        <Field Name="XLines">
-          <DataField>XLines</DataField>
-        </Field>
-        <Field Name="No_">
-          <DataField>No_</DataField>
-        </Field>
-        <Field Name="No">
-          <DataField>No</DataField>
-        </Field>
-        <Field Name="XBlanks">
-          <DataField>XBlanks</DataField>
-        </Field>
-        <Field Name="XBlank">
-          <DataField>XBlank</DataField>
-        </Field>
-        <Field Name="XSideBar">
-          <DataField>XSideBar</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-    </DataSet>
-  </DataSets>
 </Report>

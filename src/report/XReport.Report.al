@@ -10,24 +10,35 @@ report 50101 "XReport"
     {
         dataitem("Sales Header"; "Sales Header")
         {
-            RequestFilterFields = "No.", "Sell-to Customer No.";
+            RequestFilterFields = "No.";
 
             column(XLinesPerPage; XLinesPerPage) { }
             column(XTotalsLines; XTotalsLines) { }
             column(XLines; XLines) { }
 
-            column(No_; "No.") { IncludeCaption = true; }
+            column(Company_Picture; CompanyInformation.Picture) { }
+            column(Company_Name; CompanyInformation.Name) { }
+            column(Company_Name_2; CompanyInformation."Name 2") { }
+            column(Company_Address; CompanyInformation.Address) { }
+            column(Company_Address_2; CompanyInformation."Address 2") { }
+            column(Company_Post_Code; CompanyInformation."Post Code") { }
+            column(Company_City; CompanyInformation.City) { }
+            column(Company_Country; CompanyInformation.County) { }
+            column(Company_Phone_No; CompanyInformation."Phone No.") { }
+            column(Company_E_Mail; CompanyInformation."E-Mail") { }
+            column(Company_Web; CompanyInformation."Home Page") { }
+            column(Company_CIF; CompanyInformation."VAT Registration No.") { }
 
-            dataitem("Sales Invoice Line"; "Sales Line")
+            dataitem("Sales Line"; "Sales Line")
             {
                 DataItemLinkReference = "Sales Header";
-                DataItemLink = "Document No." = field("No."), "Bill-to Customer No." = field("Bill-to Customer No.");
+                DataItemLink = "Document No." = field("No."), "Sell-to Customer No." = field("Sell-to Customer No.");
                 DataItemTableView = sorting("Document No.", "Line No.", "Bill-to Customer No.");
 
                 column(No; "No.") { }
                 trigger OnPreDataItem()
                 begin
-                    XLines := "Sales Invoice Line".Count;
+                    XLines := "Sales Line".Count;
                 end;
             }
 
@@ -63,15 +74,20 @@ report 50101 "XReport"
 
     trigger OnInitReport()
     begin
+        CompanyInformation.SetAutoCalcFields(Picture);
+        CompanyInformation.Get;
+
         XLinesPerPage := 26;
         XTotalsLines := 4;
     end;
 
     var
-        XPage: Integer;
         XLinesPerPage: Integer;
         XTotalsLines: Integer;
         XLines: Integer;
-        XLine: Integer;
         XBlanks: Integer;
+
+        TempVatAmountLine: Record "VAT Amount Line" temporary;
+        CompanyInformation: Record "Company Information";
+        CompanyBankAccount: Record "Bank Account";
 }
