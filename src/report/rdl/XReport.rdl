@@ -614,7 +614,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>PEDIDO DE VENTA</Value>
+                                      <Value>FACTURA DE VENTA</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -657,7 +657,7 @@
                                       </Style>
                                     </TextRun>
                                     <TextRun>
-                                      <Value>=Fields!Sell_to_Customer_No_.Value</Value>
+                                      <Value>=Fields!Bill_to_Customer_No_.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -1057,7 +1057,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=UCase(Fields!Sell_to_Customer_Name.Value)</Value>
+                                      <Value>=UCase(Fields!Bill_to_Name.Value)</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                       </Style>
@@ -1088,7 +1088,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!Sell_to_Address.Value</Value>
+                                      <Value>=Fields!Bill_to_Address.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -1102,7 +1102,7 @@
                                       </Style>
                                     </TextRun>
                                     <TextRun>
-                                      <Value>=Fields!Sell_to_Address_2.Value</Value>
+                                      <Value>=Fields!Bill_to_Address_2.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -1136,7 +1136,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!Sell_to_Post_Code.Value</Value>
+                                      <Value>=Fields!Bill_to_Post_Code.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -1170,7 +1170,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!Sell_to_City.Value</Value>
+                                      <Value>=Fields!Bill_to_City.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -1211,7 +1211,7 @@
                                       </Style>
                                     </TextRun>
                                     <TextRun>
-                                      <Value>=Fields!Sell_to_Phone_No_.Value</Value>
+                                      <Value>=Fields!BillToPhoneNo.Value</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontSize>6pt</FontSize>
@@ -2419,9 +2419,9 @@
                               </Paragraphs>
                               <rd:DefaultName>Textbox265</rd:DefaultName>
                               <Top>0.3in</Top>
-                              <Left>0.05in</Left>
+                              <Left>1.05in</Left>
                               <Height>0.25in</Height>
-                              <Width>1.5in</Width>
+                              <Width>1.25in</Width>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -2454,9 +2454,9 @@
                               </Paragraphs>
                               <rd:DefaultName>Textbox265</rd:DefaultName>
                               <Top>0.3in</Top>
-                              <Left>1.55in</Left>
+                              <Left>2.3in</Left>
                               <Height>0.25in</Height>
-                              <Width>1.25in</Width>
+                              <Width>1in</Width>
                               <ZIndex>1</ZIndex>
                               <Style>
                                 <Border>
@@ -2490,9 +2490,9 @@
                               </Paragraphs>
                               <rd:DefaultName>Textbox265</rd:DefaultName>
                               <Top>0.3in</Top>
-                              <Left>2.8in</Left>
+                              <Left>3.3in</Left>
                               <Height>0.25in</Height>
-                              <Width>1.5in</Width>
+                              <Width>1.25in</Width>
                               <ZIndex>2</ZIndex>
                               <Style>
                                 <Border>
@@ -2526,9 +2526,9 @@
                               </Paragraphs>
                               <rd:DefaultName>Textbox265</rd:DefaultName>
                               <Top>0.3in</Top>
-                              <Left>4.3in</Left>
+                              <Left>4.55in</Left>
                               <Height>0.25in</Height>
-                              <Width>3.42in</Width>
+                              <Width>3.17in</Width>
                               <ZIndex>3</ZIndex>
                               <Style>
                                 <Border>
@@ -2562,9 +2562,9 @@
                               </Paragraphs>
                               <rd:DefaultName>Textbox265</rd:DefaultName>
                               <Top>0.05in</Top>
-                              <Left>0.05in</Left>
+                              <Left>1.05in</Left>
                               <Height>0.25in</Height>
-                              <Width>1.5in</Width>
+                              <Width>1.25in</Width>
                               <ZIndex>4</ZIndex>
                               <Style>
                                 <Border>
@@ -2597,9 +2597,9 @@
                               </Paragraphs>
                               <rd:DefaultName>Textbox265</rd:DefaultName>
                               <Top>0.05in</Top>
-                              <Left>1.55in</Left>
+                              <Left>2.3in</Left>
                               <Height>0.25in</Height>
-                              <Width>1.25in</Width>
+                              <Width>1in</Width>
                               <ZIndex>5</ZIndex>
                               <Style>
                                 <Border>
@@ -2632,9 +2632,9 @@
                               </Paragraphs>
                               <rd:DefaultName>Textbox265</rd:DefaultName>
                               <Top>0.05in</Top>
-                              <Left>2.8in</Left>
+                              <Left>3.3in</Left>
                               <Height>0.25in</Height>
-                              <Width>1.5in</Width>
+                              <Width>1.25in</Width>
                               <ZIndex>6</ZIndex>
                               <Style>
                                 <Border>
@@ -2667,9 +2667,9 @@
                               </Paragraphs>
                               <rd:DefaultName>Textbox265</rd:DefaultName>
                               <Top>0.05in</Top>
-                              <Left>4.3in</Left>
+                              <Left>4.55in</Left>
                               <Height>0.25in</Height>
-                              <Width>3.42in</Width>
+                              <Width>3.17in</Width>
                               <ZIndex>7</ZIndex>
                               <Style>
                                 <Border>
@@ -2712,6 +2712,77 @@
                               <Height>0.25in</Height>
                               <Width>3.42in</Width>
                               <ZIndex>8</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <VerticalAlign>Middle</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox285">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!SubTotal.Value</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <Format>N2</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox265</rd:DefaultName>
+                              <Top>0.3in</Top>
+                              <Left>0.05in</Left>
+                              <Height>0.25in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>9</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <VerticalAlign>Middle</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox284">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>BRUTO</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox265</rd:DefaultName>
+                              <Top>0.05in</Top>
+                              <Left>0.05in</Left>
+                              <Height>0.25in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>10</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>Solid</Style>
@@ -3208,8 +3279,8 @@ End Function</Code>
         <Field Name="Location_Code">
           <DataField>Location_Code</DataField>
         </Field>
-        <Field Name="Sell_to_Customer_No_">
-          <DataField>Sell_to_Customer_No_</DataField>
+        <Field Name="Bill_to_Customer_No_">
+          <DataField>Bill_to_Customer_No_</DataField>
         </Field>
         <Field Name="VAT_Registration_No_">
           <DataField>VAT_Registration_No_</DataField>
@@ -3226,23 +3297,23 @@ End Function</Code>
         <Field Name="Payment_Terms_Code">
           <DataField>Payment_Terms_Code</DataField>
         </Field>
-        <Field Name="Sell_to_Customer_Name">
-          <DataField>Sell_to_Customer_Name</DataField>
+        <Field Name="Bill_to_Name">
+          <DataField>Bill_to_Name</DataField>
         </Field>
-        <Field Name="Sell_to_Address">
-          <DataField>Sell_to_Address</DataField>
+        <Field Name="Bill_to_Address">
+          <DataField>Bill_to_Address</DataField>
         </Field>
-        <Field Name="Sell_to_Address_2">
-          <DataField>Sell_to_Address_2</DataField>
+        <Field Name="Bill_to_Address_2">
+          <DataField>Bill_to_Address_2</DataField>
         </Field>
-        <Field Name="Sell_to_Post_Code">
-          <DataField>Sell_to_Post_Code</DataField>
+        <Field Name="Bill_to_Post_Code">
+          <DataField>Bill_to_Post_Code</DataField>
         </Field>
-        <Field Name="Sell_to_City">
-          <DataField>Sell_to_City</DataField>
+        <Field Name="Bill_to_City">
+          <DataField>Bill_to_City</DataField>
         </Field>
-        <Field Name="Sell_to_Phone_No_">
-          <DataField>Sell_to_Phone_No_</DataField>
+        <Field Name="BillToPhoneNo">
+          <DataField>BillToPhoneNo</DataField>
         </Field>
         <Field Name="Item_No">
           <DataField>Item_No</DataField>

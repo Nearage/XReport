@@ -8,7 +8,7 @@ report 50101 "XReport"
 
     dataset
     {
-        dataitem("Sales Header"; "Sales Header")
+        dataitem("Sales Invoice Header"; "Sales Invoice Header")
         {
             RequestFilterFields = "No.";
 
@@ -32,23 +32,23 @@ report 50101 "XReport"
             column(Order_No; "No.") { }
             column(Order_Date; "Order Date") { }
             column(Location_Code; "Location Code") { }
-            column(Sell_to_Customer_No_; "Sell-to Customer No.") { }
+            column(Bill_to_Customer_No_; "Bill-to Customer No.") { }
             column(VAT_Registration_No_; "VAT Registration No.") { }
             column(Shipping_Agent_Code; "Shipping Agent Code") { }
             column(VATPct; VATPct) { }
             column(Payment_Terms_Code; "Payment Terms Code") { }
 
-            column(Sell_to_Customer_Name; "Sell-to Customer Name") { }
-            column(Sell_to_Address; "Sell-to Address") { }
-            column(Sell_to_Address_2; "Sell-to Address 2") { }
-            column(Sell_to_Post_Code; "Sell-to Post Code") { }
-            column(Sell_to_City; "Sell-to City") { }
-            column(Sell_to_Phone_No_; "Sell-to Phone No.") { }
+            column(Bill_to_Name; "Bill-to Name") { }
+            column(Bill_to_Address; "Bill-to Address") { }
+            column(Bill_to_Address_2; "Bill-to Address 2") { }
+            column(Bill_to_Post_Code; "Bill-to Post Code") { }
+            column(Bill_to_City; "Bill-to City") { }
+            column(BillToPhoneNo; BillToPhoneNo) { }
 
-            dataitem("Sales Line"; "Sales Line")
+            dataitem("Sales Invoice Line"; "Sales Invoice Line")
             {
-                DataItemLinkReference = "Sales Header";
-                DataItemLink = "Document No." = field("No."), "Sell-to Customer No." = field("Sell-to Customer No.");
+                DataItemLinkReference = "Sales Invoice Header";
+                DataItemLink = "Document No." = field("No."), "Bill-to Customer No." = field("Bill-to Customer No.");
                 DataItemTableView = sorting("Document No.", "Line No.", "Bill-to Customer No.");
 
                 column(Item_No; "No.") { }
@@ -60,8 +60,13 @@ report 50101 "XReport"
                 column(VAT__; "VAT %") { }
 
                 trigger OnPreDataItem()
+                var
+                    Customer: Record Customer;
                 begin
-                    XLines := "Sales Line".Count;
+                    XLines := "Sales Invoice Header".Count;
+
+                    if Customer.Get("Sales Invoice Header"."Bill-to Customer No.") then
+                        BillToPhoneNo := Customer."Phone No.";
                 end;
 
                 trigger OnAfterGetRecord()
@@ -132,4 +137,5 @@ report 50101 "XReport"
         VATPct: Decimal;
         VAT_Amount: Decimal;
         Total: Decimal;
+        BillToPhoneNo: Text[30];
 }
