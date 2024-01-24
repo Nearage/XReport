@@ -117,21 +117,19 @@ report 50101 "XReport"
     trigger OnInitReport()
     begin
         CompanyInformation.SetAutoCalcFields(Picture);
-        CompanyInformation.Get;
+        CompanyInformation.Get();
 
         XLinesPerPage := 26;
         XTotalsLines := 4;
     end;
 
     var
+        CompanyInformation: Record "Company Information";
+
         XLinesPerPage: Integer;
         XTotalsLines: Integer;
         XLines: Integer;
         XBlanks: Integer;
-
-        TempVatAmountLine: Record "VAT Amount Line" temporary;
-        CompanyInformation: Record "Company Information";
-        CompanyBankAccount: Record "Bank Account";
 
         SubTotal: Decimal;
         VATPct: Decimal;
