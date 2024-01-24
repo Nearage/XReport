@@ -38,6 +38,13 @@ report 50101 "XReport"
             column(VATPct; VATPct) { }
             column(Payment_Terms_Code; "Payment Terms Code") { }
 
+            column(Sell_to_Customer_Name; "Sell-to Customer Name") { }
+            column(Sell_to_Address; "Sell-to Address") { }
+            column(Sell_to_Address_2; "Sell-to Address 2") { }
+            column(Sell_to_Post_Code; "Sell-to Post Code") { }
+            column(Sell_to_City; "Sell-to City") { }
+            column(Sell_to_Phone_No_; "Sell-to Phone No.") { }
+
             dataitem("Sales Line"; "Sales Line")
             {
                 DataItemLinkReference = "Sales Header";
