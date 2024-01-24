@@ -8,7 +8,7 @@ report 50101 "XReport"
 
     dataset
     {
-        dataitem("Sales Header"; "Sales Header")
+        dataitem("Sales Shipment Header"; "Sales Shipment Header")
         {
             RequestFilterFields = "No.";
 
@@ -45,9 +45,9 @@ report 50101 "XReport"
             column(Sell_to_City; "Sell-to City") { }
             column(Sell_to_Phone_No_; "Sell-to Phone No.") { }
 
-            dataitem("Sales Line"; "Sales Line")
+            dataitem("Sales Shipment Line"; "Sales Shipment Line")
             {
-                DataItemLinkReference = "Sales Header";
+                DataItemLinkReference = "Sales Shipment Header";
                 DataItemLink = "Document No." = field("No."), "Sell-to Customer No." = field("Sell-to Customer No.");
                 DataItemTableView = sorting("Document No.", "Line No.", "Bill-to Customer No.");
 
@@ -61,11 +61,12 @@ report 50101 "XReport"
 
                 trigger OnPreDataItem()
                 begin
-                    XLines := "Sales Line".Count;
+                    XLines := "Sales Shipment Line".Count;
                 end;
 
                 trigger OnAfterGetRecord()
                 begin
+                    Amount := Quantity * "Unit Price";
                     SubTotal += Amount;
 
                     if "VAT %" > VATPct Then
@@ -128,6 +129,7 @@ report 50101 "XReport"
         CompanyInformation: Record "Company Information";
         CompanyBankAccount: Record "Bank Account";
 
+        Amount: Decimal;
         SubTotal: Decimal;
         VATPct: Decimal;
         VAT_Amount: Decimal;

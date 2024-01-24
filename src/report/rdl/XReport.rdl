@@ -614,7 +614,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>PEDIDO DE VENTA</Value>
+                                      <Value>ALBARÁN</Value>
                                       <Style>
                                         <FontFamily>Calibri</FontFamily>
                                         <FontWeight>Bold</FontWeight>
